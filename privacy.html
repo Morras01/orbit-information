@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="How Orbit Personal handles connected calendar information, private credentials and this public information website."
+    />
+    <meta name="referrer" content="no-referrer" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; style-src 'self'; img-src 'self'; script-src 'none'; connect-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'"
+    />
+    <title>Privacy notice · Orbit Personal</title>
+    <link rel="icon" href="./orbit.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <div class="shell">
+      <header>
+        <a class="brand" href="./" aria-label="Orbit Personal home"
+          ><img src="./orbit.svg" width="34" height="34" alt="" /><span
+            >Orbit<small>Personal</small></span
+          ></a
+        >
+        <nav aria-label="Main navigation">
+          <a href="./">About Orbit</a
+          ><a href="./privacy.html" aria-current="page">Privacy</a>
+        </nav>
+      </header>
+      <main class="privacy" id="main">
+        <p class="eyebrow">Your information, considered</p>
+        <h1>Privacy notice</h1>
+        <p class="updated">Last updated 28 October 2026</p>
+        <p class="lead">
+          Orbit Personal is a self-hosted personal planning app. Your private
+          Orbit instance runs on a device controlled by its owner. This public
+          website explains its calendar connections; it does not connect to your
+          accounts or your private instance.
+        </p>
+        <section>
+          <h2>Calendar information</h2>
+          <p>
+            Orbit uses connected calendar information to calculate availability
+            and suggest focus windows around existing commitments. It keeps busy
+            start and end times, connection status and the calendar selections
+            needed to perform those checks.
+          </p>
+          <ul>
+            <li>
+              <strong>Google Calendar:</strong> Orbit requests free/busy
+              availability for the authorized account’s primary calendar.
+            </li>
+            <li>
+              <strong>Microsoft Outlook:</strong> Orbit requests event start and
+              end times, free/busy status and cancellation status from the
+              personal account’s default calendar.
+            </li>
+            <li>
+              <strong>Apple iCloud:</strong> Orbit reads the calendars the owner
+              explicitly selects. Calendar entries are processed temporarily to
+              interpret repeating, all-day and time-zone-dependent events. Only
+              busy intervals are retained.
+            </li>
+          </ul>
+          <p>
+            Orbit does not retain event titles, event descriptions, attendee
+            lists or attachments from these calendar checks. It does not create,
+            edit or delete provider calendar entries.
+          </p>
+        </section>
+        <section>
+          <h2>Private storage and account access</h2>
+          <p>
+            Access and refresh tokens, OAuth application settings and iCloud
+            app-specific passwords are stored in the private Orbit instance. The
+            public information site receives none of these credentials.
+            Connection credentials and cached busy intervals are excluded from
+            Orbit’s personal planning export.
+          </p>
+          <p>
+            The instance uses restricted filesystem permissions for its private
+            database and HTTPS for calendar-provider connections. The owner
+            remains responsible for protecting the device, private network and
+            backups. This does not claim separate encryption of the local
+            database.
+          </p>
+        </section>
+        <section>
+          <h2>How information is used</h2>
+          <p>
+            Calendar information is used for availability-aware personal
+            planning. It is not sold, used for advertising, or used to train AI
+            models. Calendar event content is not supplied to Orbit’s AI model.
+          </p>
+          <p>
+            When using Google Calendar information, Orbit follows the
+            <a
+              href="https://developers.google.com/terms/api-services-user-data-policy"
+              rel="noreferrer noopener"
+              >Google API Services User Data Policy</a
+            >, including its Limited Use requirements.
+          </p>
+          <p>
+            Optional phone notifications contain generic reminders; calendar
+            event details are not included. Calendar providers process the
+            requests needed to supply availability under their own account
+            policies.
+          </p>
+        </section>
+        <section>
+          <h2>Retention and disconnection</h2>
+          <p>
+            Each successful refresh replaces the current cached availability. An
+            unavailable or stale calendar is not treated as free time. Expired
+            information may remain cached until a refresh or disconnection, but
+            is excluded from scheduling.
+          </p>
+          <p>
+            Disconnecting an account removes its active access and refresh
+            tokens or iCloud password, calendar selection and cached
+            availability from the running instance. OAuth application setup may
+            remain for reconnecting. Separate private backups may contain
+            earlier copies and are managed by the instance owner.
+          </p>
+          <p>
+            Account permissions can also be revoked in the provider’s account
+            settings. Revoking provider access does not automatically delete
+            private backups.
+          </p>
+        </section>
+        <section>
+          <h2>This public website</h2>
+          <p>
+            These are static information pages. They have no forms, sign-in
+            controls, scripts, advertising or analytics added by Orbit. They do
+            not contact the private Orbit app and cannot read your projects or
+            calendars.
+          </p>
+          <p>
+            The site is hosted on GitHub Pages. GitHub may process normal
+            request information, including visitors’ IP addresses, for hosting
+            and security. See the
+            <a
+              href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement"
+              rel="noreferrer noopener"
+              >GitHub General Privacy Statement</a
+            >.
+          </p>
+        </section>
+        <section>
+          <h2>Questions and changes</h2>
+          <p>
+            For questions about data in a private instance, contact the person
+            who administers that instance. For Google authorization questions,
+            the consent screen provides the application’s support contact. This
+            notice will be updated when the calendar data-handling behavior
+            changes.
+          </p>
+        </section>
+        <aside class="notice">
+          <span class="dot" aria-hidden="true"></span>
+          <p>
+            <strong>Keep credentials in the private app.</strong> This
+            information site never asks for a password, access token, calendar
+            credential or payment.
+          </p>
+        </aside>
+      </main>
+      <footer>
+        <p>Orbit Personal <span>·</span> Self-hosted personal planning</p>
+        <a href="./">About Orbit</a>
+      </footer>
+    </div>
+  </body>
+</html>
