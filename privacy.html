@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta
       name="description"
-      content="How Orbit Personal handles connected calendar information, private credentials and this public information website."
+      content="How Orbit Personal handles connected calendar and mailbox information, private credentials and this public information website."
     />
     <meta name="referrer" content="no-referrer" />
     <meta
@@ -33,11 +33,11 @@
       <main class="privacy" id="main">
         <p class="eyebrow">Your information, considered</p>
         <h1>Privacy notice</h1>
-        <p class="updated">Last updated 28 October 2026</p>
+        <p class="updated">Last updated 29 October 2026</p>
         <p class="lead">
           Orbit Personal is a self-hosted personal planning app. Your private
           Orbit instance runs on a device controlled by its owner. This public
-          website explains its calendar connections; it does not connect to your
+          website explains its optional calendar and mailbox connections; it does not connect to your
           accounts or your private instance.
         </p>
         <section>
@@ -72,6 +72,41 @@
           </p>
         </section>
         <section>
+          <h2>Optional personal mailbox intake</h2>
+          <p>
+            With separate, explicit consent, Orbit can read a personal Gmail or
+            Microsoft Outlook mailbox to identify possible requests and stated
+            commitments and prepare reply packs for the owner to review. Gmail
+            uses gmail.readonly; personal Outlook uses delegated Mail.Read with
+            offline access. Calendar authorization alone does not enable mail intake.
+          </p>
+          <p>
+            Orbit samples up to twenty Inbox and ten Sent messages from the last
+            seven days per connected mailbox. Cached subjects, sender and recipient
+            addresses, message dates, conversation references and normalized message
+            text are stored privately, with at most one hundred cached messages per
+            mailbox and five messages of context per conversation. Attachments are
+            not downloaded. A sample may omit messages; a sent reply does not prove
+            that a commitment was fulfilled.
+          </p>
+          <p>
+            Selected message excerpts and matching saved project context are processed
+            by the instance's local AI to prepare source-linked commitments and reply
+            drafts. They are not sent to a cloud AI service or used to train models.
+            Drafts remain inside Orbit: this connection cannot send mail, alter mailbox
+            messages or create provider-side drafts. The owner reviews and sends any
+            response separately in their mail application.
+          </p>
+          <p>
+            Cached mailbox messages and reply packs expire after fourteen days and
+            are excluded from the personal planning JSON export. Pause stops new
+            intake and preparation. Disconnect removes that mailbox's stored tokens,
+            cached messages and reply packs from the running instance; app setup can
+            remain for reconnecting. Private backups can retain earlier copies of
+            message text, drafts and credentials and are managed by the owner.
+          </p>
+        </section>
+        <section>
           <h2>Private storage and account access</h2>
           <p>
             Access and refresh tokens, OAuth application settings and iCloud
@@ -82,7 +117,7 @@
           </p>
           <p>
             The instance uses restricted filesystem permissions for its private
-            database and HTTPS for calendar-provider connections. The owner
+            database and HTTPS for provider connections. The owner
             remains responsible for protecting the device, private network and
             backups. This does not claim separate encryption of the local
             database.
@@ -96,7 +131,7 @@
             models. Calendar event content is not supplied to Orbit’s AI model.
           </p>
           <p>
-            When using Google Calendar information, Orbit follows the
+            When using Google Calendar or Gmail information, Orbit follows the
             <a
               href="https://developers.google.com/terms/api-services-user-data-policy"
               rel="noreferrer noopener"
@@ -136,8 +171,8 @@
           <p>
             These are static information pages. They have no forms, sign-in
             controls, scripts, advertising or analytics added by Orbit. They do
-            not contact the private Orbit app and cannot read your projects or
-            calendars.
+            not contact the private Orbit app and cannot read your projects,
+            calendars or mail.
           </p>
           <p>
             The site is hosted on GitHub Pages. GitHub may process normal
@@ -156,7 +191,7 @@
             For questions about data in a private instance, contact the person
             who administers that instance. For Google authorization questions,
             the consent screen provides the application’s support contact. This
-            notice will be updated when the calendar data-handling behavior
+            notice will be updated when the connected-data handling behavior
             changes.
           </p>
         </section>
